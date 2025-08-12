@@ -180,6 +180,8 @@ schema. Example: `[{"type": "text", "text": "Hello world!"}]`"""
     h11_max_header_count: int = H11_MAX_HEADER_COUNT_DEFAULT
     """Maximum number of HTTP headers allowed in a request for h11 parser.
     Helps mitigate header abuse. Default: 256."""
+    sentry_dsn: Optional[str] = None
+    """Enables Sentry error reporting to the specified data source name."""
 
     @staticmethod
     def add_cli_args(parser: FlexibleArgumentParser) -> FlexibleArgumentParser:
